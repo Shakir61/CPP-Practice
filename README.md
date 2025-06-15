@@ -82,7 +82,64 @@ You have entered a sentinal value i.e. 0
 The number of integers entered are 4.
 The average of given numbers is 5
 
+Task no # 3: Calculator using functions
+#include<iostream>
+using namespace std;
+	
+double Addition (double num_1 ,double num_2){	
+	return num_1 + num_2;	
+}
 
+double Subtraction (double num_1 , double num_2){
+	return num_1 - num_2;
+}
+
+double Multiplication (double num_1 , double num_2){
+	return num_1 * num_2;
+}
+
+double Division (double num_1 , double num_2){	
+		if (num_2 == 0 || num_1 == 0){
+			cout << "Error division is not defined. " << endl;
+			return 0;
+		}
+	return num_1 / num_2;
+}
+int main(){	
+	double num_1;
+	double num_2;
+	char choice;
+	cout << "Enter num_1: " << endl;
+        cin >> num_1;
+        cout << "Enter num_2: " << endl;
+        cin >> num_2;
+    cout << "-------------------------------------------" << endl;
+	cout << "Select any of the following operations: " << endl;
+	cout << "1.Addition" << endl;
+	cout << "2.Subtraction" << endl;
+	cout << "3.Multiplication" << endl;
+	cout << "4.Division" << endl;
+	cout << "-------------------------------------------" << endl;
+	cout << "Enter your choice: " << endl;
+    cin >> choice;
+    cout << "-------------------------------------------" << endl;
+	switch (choice){
+		case '1':
+			cout << "Addition: " << Addition(num_1 , num_2) << endl;
+			break;
+		case '2':
+			cout << "Subtraction: " << Subtraction(num_1 , num_2) << endl;
+			break;
+		case '3':
+			cout << "Multiplication: " << Multiplication(num_1 , num_2) << endl;
+			break;
+		case '4':
+			cout << "Division: " << Division(num_1 , num_2) << endl;
+			break;
+		default:
+			cout << "Invalid operations.";
+	}
+}
 
 
 
