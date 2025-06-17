@@ -140,21 +140,83 @@ int main(){
 			cout << "Invalid operations.";
 	}
 }
+Output:
+Enter num_1: 
+3
+Enter num_2: 
+4
+-------------------------------------------
+Select any of the following operations: 
+1.Addition
+2.Subtraction
+3.Multiplication
+4.Division
+-------------------------------------------
+Enter your choice: 
+3
+-------------------------------------------
+Multiplication: 12
 
+Task no # 4:
+#include <iostream>
+using namespace std;
 
+// (Call by Value)
+void value(int valueCopy) {
+    valueCopy = 20; 
+}
 
+// (Call by Reference)
+void change_val(int &valueRef) {
+    valueRef = 20; 
+}
 
+int main() {
+    int original = 10;
+    // (Call by Value)
+    cout << "Original value: " << original << endl;
+    value(original);
+    cout << "After calling by value: " << original << endl; // Original unchanged
+    cout << endl;
+    // (Call by Reference)
+    cout << "Original value: " << original << endl;
+    change_val(original);
+    cout << "After calling by refernce: " << original << endl; // Original changed
+    return 0;
+}
 
+Output:
+Original value: 10
+After calling by value: 10
 
+Original value: 10
+After calling by refernce: 20
 
+Task no # 5: 
+// Write a program that count down a number entered.
 
-
-
-
-
-
-
-
-
-
-Output
+#include<iostream>
+using namespace std;
+int main(){
+	int number;
+	cout << "Enter a number: " << endl;
+	cin >> number;
+	cout << "Now I will count down from " << number << " to 0: " << endl;
+	while (number >= 0){
+		if (number > 0){
+		cout << number << ",";
+		number--;
+	}
+	else if (number == 0){
+		cout << number << ".";
+		number--;
+	}	
+}
+    return 0;
+    
+}
+Output:
+Enter a number: 
+6
+Now I will count down from 6 to 0: 
+6,5,4,3,2,1,0.
